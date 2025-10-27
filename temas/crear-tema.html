@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nuevo Tema - Foro E.E.S.T. N°5</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <img src="../assets/logo.png" alt="Logo EEST N5">
+                </div>
+                <h1 class="school-title">Foro E.E.S.T. N°5</h1>
+            </div>
+            <button class="hamburger-menu" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../especialidades/construcciones.html">Construcciones</a></li>
+                    <li><a href="../especialidades/informatica.html">Informática</a></li>
+                    <li><a href="../especialidades/electronica.html">Electrónica</a></li>
+                    <li><a href="../registros/login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h1>Crear Nuevo Tema</h1>
+            <form id="create-topic-form">
+                <div class="form-group">
+                    <label for="topic-title">Título del Tema</label>
+                    <input type="text" id="topic-title" name="topic-title" required placeholder="Escribe un título claro y conciso">
+                </div>
+                <div class="form-group">
+                    <label for="topic-category">Categoría</label>
+                    <select id="topic-category" name="topic-category" required>
+                        <option value="" disabled selected>Elige una especialidad...</option>
+                        <option value="construcciones">Construcciones</option>
+                        <option value="informatica">Informática</option>
+                        <option value="electronica">Electrónica</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="topic-content">Contenido</label>
+                    <textarea id="topic-content" name="topic-content" rows="10" required placeholder="Describe tu consulta o idea aquí..."></textarea>
+                </div>
+                <button type="submit" class="form-btn">Publicar Tema</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 E.E.S.T. N°5 "Amancio Williams". Todos los derechos reservados. Creado por los alumnos en el Club de Tecnología.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
