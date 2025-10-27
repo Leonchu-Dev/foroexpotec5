@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viendo Tema - Foro E.E.S.T. N°5</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-placeholder">
+                    <img src="../assets/logo.png" alt="Logo EEST N5">
+                </div>
+                <h1 class="school-title">Foro E.E.S.T. N°5</h1>
+            </div>
+            <button class="hamburger-menu" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../especialidades/construcciones.html">Construcciones</a></li>
+                    <li><a href="../especialidades/informatica.html">Informática</a></li>
+                    <li><a href="../especialidades/electronica.html">Electrónica</a></li>
+                    <li><a href="../registros/login.html">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Título del Tema -->
+        <div class="topic-title-header" id="topic-header">
+            <h1 id="topic-title">Consulta sobre Base de Datos para Proyecto Final de 7mo (Informática)</h1>
+        </div>
+
+        <!-- Post Original -->
+        <div class="post original-post" id="original-post-container">
+            <div class="post-author">
+                <div class="author-avatar" id="author-avatar">JP</div>
+                <div class="author-details">
+                    <strong id="original-post-author">Juan Pérez</strong>
+                    <small id="original-post-date">Publicado hace 2 horas</small>
+                </div>
+            </div>
+            <div class="post-content" id="original-post-content">
+                <p>¡Hola a todos! Estoy empezando a planificar mi proyecto final, que es un sistema de gestión para la biblioteca de la escuela. Tengo dudas sobre qué tipo de base de datos usar.</p>
+                <p>¿Alguien tiene experiencia con MongoDB para este tipo de proyectos, o me recomiendan seguir con algo relacional como MySQL por ser más tradicional y robusto para manejar relaciones entre libros, autores y préstamos? ¡Gracias!</p>
+            </div>
+        </div>
+
+        <!-- Respuestas -->
+        <div class="responses-header">
+            <h3>Respuestas</h3>
+        </div>
+        <div id="responses-container">
+            <!-- Las respuestas de ejemplo o las dinámicas se cargarán aquí -->
+            <div class="post">
+                <div class="post-author">
+                    <div class="author-avatar" style="background-color: #006400;">MG</div>
+                    <div class="author-details">
+                        <strong>María Gómez</strong>
+                        <small>Publicado hace 1 hora</small>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>¡Buena pregunta, Juan! Para un sistema de gestión de biblioteca, una base de datos relacional como MySQL o PostgreSQL es una apuesta segura. Es muy robusta para manejar las transacciones de préstamos y devoluciones, y la integridad de los datos es clave. Además, hay muchísima documentación y es lo que más se ve en el mundo laboral.</p>
+                </div>
+            </div>
+    
+            <div class="post">
+                <div class="post-author">
+                    <div class="author-avatar" style="background-color: #8B0000;">CR</div>
+                    <div class="author-details">
+                        <strong>Carlos Rodriguez</strong>
+                        <small>Publicado hace 30 minutos</small>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <p>Yo usé MongoDB el año pasado para un proyecto de un blog y la flexibilidad fue increíble. Si prevés que los datos de los libros (como agregar campos nuevos tipo "ebook disponible" o "etiquetas") pueden cambiar mucho, no tener un esquema rígido te salva tiempo. La curva de aprendizaje no es tan alta como parece. ¡Anímate a probarlo si quieres aprender algo nuevo y diferente!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario para responder -->
+        <div class="reply-form-container" id="reply-form-wrapper">
+            <h3>Escribe una respuesta</h3>
+            <form id="reply-form">
+                <textarea id="reply-content" placeholder="Tu respuesta aquí..." rows="6" required></textarea>
+                <button type="submit" class="form-btn">Publicar Respuesta</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 E.E.S.T. N°5 "Amancio Williams". Todos los derechos reservados. Creado por los alumnos en el Club de Tecnología.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
