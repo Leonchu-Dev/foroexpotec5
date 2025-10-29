@@ -10,6 +10,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Lógica del Carrusel (Página de Inicio) ---
+    const carousel = document.querySelector('.carousel-container');
+    if (carousel) {
+        const slide = carousel.querySelector('.carousel-slide');
+        const items = carousel.querySelectorAll('.carousel-item');
+        const nextBtn = carousel.querySelector('.next');
+        const prevBtn = carousel.querySelector('.prev');
+        
+        let currentIndex = 0;
+        const totalItems = items.length;
+
+        function updateCarousel() {
+            // Mueve el slide a la posición correcta
+            slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel();
+        });
+
+        // Se ha desactivado el avance automático. Para reactivarlo, descomenta las siguientes líneas.
+        // setInterval(() => {
+        //     nextBtn.click();
+        // }, 5000);
+    }
+
     // --- Lógica de Autenticación y UI ---
     const loggedInUser = localStorage.getItem('loggedInUser');
     const loginLink = document.querySelector('a[href$="login.html"]');

@@ -401,6 +401,7 @@ main {
     .post-author {
         width: 100%;
         text-align: left;
+        padding-bottom: 1rem;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -409,8 +410,23 @@ main {
         border-left: none;
         padding-left: 0;
     }
-}
+    /* --- Carrusel Responsivo --- */
+    .carousel-item img {
+        aspect-ratio: 3 / 4; /* Proporción de retrato para móviles, mucho más alta */
+    }
+    .carousel-caption {
+        padding: 2rem 1rem 1rem; /* Padding inferior reducido para bajar el texto */
+        text-align: center; /* Centramos el título */
+    }
 
+    .carousel-caption h3 {
+        font-size: 1.1rem; /* Título un poco más grande y legible */
+    }
+
+    .carousel-caption p {
+        display: none; /* Ocultamos el párrafo en móviles */
+    }
+}
 .topic-stats {
     margin-left: auto;
     text-align: right;
@@ -592,3 +608,73 @@ main {
     font-size: 0.9rem;
     color: var(--color-texto-secundario);
 }
+
+/* --- Estilos del Carrusel (Página de Inicio) --- */
+.carousel-container {
+    position: relative;
+    max-width: 1100px; /* O el ancho que prefieras */
+    margin: 0 auto 2.5rem; /* Centrado y con margen inferior */
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px var(--color-sombra);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 7; /* Proporción para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio */
+    background-color: #ddd; /* Color de fondo mientras carga la imagen */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 3rem 1.5rem 1.5rem; /* Más padding para que el texto respire */
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control.prev { left: 10px; border-radius: 5px 0 0 5px; }
+.carousel-control.next { right: 10px; border-radius: 0 5px 5px 0; }
